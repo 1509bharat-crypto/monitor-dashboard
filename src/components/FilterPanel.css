@@ -1,3 +1,64 @@
+/* Filter Panel Container */
+.filter-panel-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Top Row - Timestamp + Compare button */
+.filter-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-top-row .last-updated {
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.filter-top-row .last-updated .material-symbols-outlined {
+  font-size: 16px;
+}
+
+/* Filter Presets */
+.filter-presets {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.presets-label {
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.preset-btn {
+  background-color: transparent;
+  border: 1px solid var(--md-sys-color-outline-variant);
+  color: var(--md-sys-color-on-surface-variant);
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.preset-btn:hover {
+  background-color: var(--md-sys-color-surface-container-high);
+}
+
+.preset-btn.active {
+  background-color: #2964FF;
+  border-color: #2964FF;
+  color: #FFFFFF;
+}
+
 /* MD3 Filter Panel */
 .filter-panel {
   background-color: var(--md-sys-color-surface);
@@ -64,6 +125,23 @@
 .filter-select-wrapper:focus-within,
 .filter-input-wrapper:focus-within {
   background-color: var(--md-sys-color-surface-container-high);
+}
+
+/* Active filter state - when value differs from default */
+.filter-select-wrapper.active,
+.filter-input-wrapper.active {
+  background-color: rgba(41, 100, 255, 0.15);
+}
+
+.filter-select-wrapper.active .filter-icon,
+.filter-input-wrapper.active .filter-icon {
+  color: #2964FF;
+}
+
+.filter-select-wrapper.active .filter-select,
+.filter-input-wrapper.active .filter-input {
+  color: #2964FF;
+  font-weight: 500;
 }
 
 .filter-icon {
@@ -183,6 +261,34 @@
   cursor: text;
 }
 
+/* Compare Button - Text style (in top row) */
+.btn-compare {
+  background: transparent;
+  border: none;
+  color: var(--md-sys-color-on-surface-variant);
+  padding: 0 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  cursor: pointer;
+  transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+  white-space: nowrap;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-compare .material-symbols-outlined {
+  font-size: 16px;
+}
+
+.btn-compare:hover {
+  background-color: var(--md-sys-color-surface-container-high);
+}
+
 /* MD3 Filled Button */
 .btn-generate {
   background: #2964FF;
@@ -214,3 +320,4 @@
 .btn-generate:active {
   box-shadow: none;
 }
+

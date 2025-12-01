@@ -109,15 +109,15 @@
 }
 
 .bar-segment.pure-spectrum {
-  background-color: #FB8C00;
+  background-color: #2964FF;
 }
 
 .bar-segment.dynata {
-  background-color: #AB47BC;
+  background-color: rgba(41, 100, 255, 0.6);
 }
 
 .bar-segment.kantar {
-  background-color: #5C6BC0;
+  background-color: rgba(41, 100, 255, 0.35);
 }
 
 .bar-segment.target {

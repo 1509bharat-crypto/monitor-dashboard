@@ -20,7 +20,7 @@
 .qualified-label {
   color: var(--md-sys-color-on-surface);
   font-size: var(--md-sys-typescale-title-medium);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .qualified-count {
@@ -49,7 +49,7 @@
 
 .qualified-progress-fill {
   height: 100%;
-  background-color: #FFA726;
+  background-color: #2964FF;
   border-radius: 4px;
   transition: width var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-standard);
 }

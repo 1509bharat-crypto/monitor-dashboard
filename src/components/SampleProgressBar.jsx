@@ -21,26 +21,30 @@ const SampleProgressBar = () => {
     {
       label: 'In progress',
       value: inProgressCount,
-      color: '#FFA726',
-      percentage: calculatePercentage(inProgressCount)
+      color: 'rgba(41, 100, 255, 0.6)',
+      percentage: calculatePercentage(inProgressCount),
+      tooltip: 'Respondents currently taking the survey'
     },
     {
       label: 'Dropouts',
       value: dropoutsCount,
-      color: '#5C6BC0',
-      percentage: calculatePercentage(dropoutsCount)
+      color: 'rgba(41, 100, 255, 0.35)',
+      percentage: calculatePercentage(dropoutsCount),
+      tooltip: 'Respondents who started but abandoned the survey'
     },
     {
       label: 'Terminates',
       value: terminatesCount,
       color: '#EF5350',
-      percentage: calculatePercentage(terminatesCount)
+      percentage: calculatePercentage(terminatesCount),
+      tooltip: 'Respondents who did not qualify based on screening criteria'
     },
     {
       label: 'Completes',
       value: completesCount,
       color: '#66BB6A',
-      percentage: calculatePercentage(completesCount)
+      percentage: calculatePercentage(completesCount),
+      tooltip: 'Respondents who successfully completed the survey'
     }
   ]
 
@@ -73,7 +77,7 @@ const SampleProgressBar = () => {
           <span className="status-value">{totalResponses.toLocaleString()}</span>
         </div>
         {segments.map((segment) => (
-          <div key={segment.label} className="status-row">
+          <div key={segment.label} className="status-row" title={segment.tooltip}>
             <span className="status-label">
               <span className="status-dot" style={{ backgroundColor: segment.color }} />
               {segment.label}

@@ -82,15 +82,15 @@ const CompletesDistribution = () => {
 
       <div className="legend">
         <div className="legend-item">
-          <div className="legend-dot" style={{ backgroundColor: '#FB8C00' }}></div>
+          <div className="legend-dot" style={{ backgroundColor: '#2964FF' }}></div>
           <span className="legend-label">PureSpectrum</span>
         </div>
         <div className="legend-item">
-          <div className="legend-dot" style={{ backgroundColor: '#AB47BC' }}></div>
+          <div className="legend-dot" style={{ backgroundColor: 'rgba(41, 100, 255, 0.6)' }}></div>
           <span className="legend-label">Dynata</span>
         </div>
         <div className="legend-item">
-          <div className="legend-dot" style={{ backgroundColor: '#5C6BC0' }}></div>
+          <div className="legend-dot" style={{ backgroundColor: 'rgba(41, 100, 255, 0.35)' }}></div>
           <span className="legend-label">Kantar</span>
         </div>
         <div className="legend-item">

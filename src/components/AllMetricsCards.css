@@ -26,9 +26,15 @@
 /* MD3 Title Small */
 .metric-card-header-unified {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.metric-card-labels {
+  display: flex;
   align-items: baseline;
   gap: 8px;
-  margin-bottom: 12px;
 }
 
 .metric-card-label-unified {
@@ -69,6 +75,19 @@
   font-size: var(--md-sys-typescale-title-medium);
   font-weight: 400;
   margin-left: 4px;
+}
+
+.trend-indicator {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.trend-indicator.up {
+  color: #66BB6A;
+}
+
+.trend-indicator.down {
+  color: #EF5350;
 }
 
 /* Responsive - Mobile */
