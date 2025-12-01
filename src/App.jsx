@@ -3,6 +3,9 @@ import { DataProvider } from './contexts/DataContext'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import FilterPanel from './components/FilterPanel'
+import QualifiedCompletesBar from './components/QualifiedCompletesBar'
+import CumulativeProgressChart from './components/CumulativeProgressChart'
+import NewSamplesChart from './components/NewSamplesChart'
 import AllMetricsCards from './components/AllMetricsCards'
 import SampleProgressBar from './components/SampleProgressBar'
 import CompletesDistribution from './components/CompletesDistribution'
@@ -30,6 +33,17 @@ function App() {
           {/* Filters Section */}
           <div className="dashboard-section">
             <FilterPanel filters={filters} setFilters={setFilters} />
+          </div>
+
+          {/* Row 0: Qualified Completes Progress Bar */}
+          <div className="dashboard-section">
+            <QualifiedCompletesBar />
+          </div>
+
+          {/* Row 0.5: Charts Row - Cumulative Progress | New Samples */}
+          <div className="row-charts-two-columns">
+            <CumulativeProgressChart />
+            <NewSamplesChart />
           </div>
 
           {/* Row 1: Sample Progress | Data Quality Donut | Metrics (3 columns) */}

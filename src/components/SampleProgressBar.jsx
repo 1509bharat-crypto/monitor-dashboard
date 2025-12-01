@@ -1,6 +1,5 @@
 import { useData } from '../contexts/DataContext'
 import './SampleProgressBar.css'
-import HorizontalBreakdown from './HorizontalBreakdown'
 
 const SampleProgressBar = () => {
   const { calculatedData, baseData } = useData()
@@ -10,6 +9,7 @@ const SampleProgressBar = () => {
   const dropoutsCount = calculatedData.dropouts ?? 0
   const terminatesCount = calculatedData.terminates ?? 0
 
+  const totalResponses = calculatedData.totalTarget ?? 0
   const totalCompleted = inProgressCount + dropoutsCount + terminatesCount + completesCount
 
   const calculatePercentage = (value) => {
@@ -17,72 +17,71 @@ const SampleProgressBar = () => {
     return Math.round((value / totalCompleted) * 100 * 10) / 10
   }
 
-  const data = {
-    total: calculatedData.totalTarget,
-    segments: [
-      {
-        label: 'In progress',
-        value: inProgressCount,
-        color: '#FFA726',
-        percentage: calculatePercentage(inProgressCount)
-      },
-      {
-        label: 'Dropouts',
-        value: dropoutsCount,
-        color: '#5C6BC0',
-        percentage: calculatePercentage(dropoutsCount)
-      },
-      {
-        label: 'Terminates',
-        value: terminatesCount,
-        color: '#EF5350',
-        percentage: calculatePercentage(terminatesCount)
-      },
-      {
-        label: 'Completes',
-        value: completesCount,
-        color: '#66BB6A',
-        percentage: calculatePercentage(completesCount)
-      }
-    ]
-  }
-
-  const breakdownSegments = [
+  const segments = [
     {
-      label: 'Total responses',
-      value: data.total,
-      displayValue: data.total.toLocaleString(),
-      showBar: false
+      label: 'In progress',
+      value: inProgressCount,
+      color: '#FFA726',
+      percentage: calculatePercentage(inProgressCount)
     },
-    ...data.segments.map(segment => ({
-      ...segment,
-      displayValue: segment.value.toLocaleString(),
-      showBar: false
-    }))
+    {
+      label: 'Dropouts',
+      value: dropoutsCount,
+      color: '#5C6BC0',
+      percentage: calculatePercentage(dropoutsCount)
+    },
+    {
+      label: 'Terminates',
+      value: terminatesCount,
+      color: '#EF5350',
+      percentage: calculatePercentage(terminatesCount)
+    },
+    {
+      label: 'Completes',
+      value: completesCount,
+      color: '#66BB6A',
+      percentage: calculatePercentage(completesCount)
+    }
   ]
-
-  // Get specific segment values for summary
-  const completesSegment = data.segments.find(s => s.label === 'Completes')
-  const terminatesSegment = data.segments.find(s => s.label === 'Terminates')
-  const dropoutsSegment = data.segments.find(s => s.label === 'Dropouts')
-
-  const formatValue = (segment) => segment ? segment.value.toLocaleString() : '0'
-  const formatPercentage = (segment) => segment ? segment.percentage : 0
 
   return (
     <div className="sample-progress-section">
       <div className="section-header">
-        <h2 className="section-title">Sample Progress Overview</h2>
-      </div>
-      <div className="progress-summary">
-        Out of {data.total.toLocaleString()} total responses, {formatValue(completesSegment)} were completes - that's {formatPercentage(completesSegment)}%. {formatValue(terminatesSegment)} respondents dropped early, and {formatValue(dropoutsSegment)} dropped out.
+        <h2 className="section-title">Sample progress overview</h2>
+        <p className="section-subtitle">Status breakdown</p>
       </div>
 
-      <HorizontalBreakdown
-        title="Status breakdown"
-        segments={breakdownSegments}
-        className="sample-progress-breakdown"
-      />
+      {/* Stacked progress bar */}
+      <div className="stacked-progress-bar">
+        {segments.map((segment) => (
+          <div
+            key={segment.label}
+            className="stacked-segment"
+            style={{
+              width: `${segment.percentage}%`,
+              backgroundColor: segment.color
+            }}
+            title={`${segment.label}: ${segment.value.toLocaleString()} (${segment.percentage}%)`}
+          />
+        ))}
+      </div>
+
+      {/* Status list */}
+      <div className="status-list">
+        <div className="status-row">
+          <span className="status-label">Total responses</span>
+          <span className="status-value">{totalResponses.toLocaleString()}</span>
+        </div>
+        {segments.map((segment) => (
+          <div key={segment.label} className="status-row">
+            <span className="status-label">
+              <span className="status-dot" style={{ backgroundColor: segment.color }} />
+              {segment.label}
+            </span>
+            <span className="status-value">{segment.value.toLocaleString()}</span>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

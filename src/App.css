@@ -70,6 +70,23 @@
   grid-column: span 2;
 }
 
+/* Row Charts: Cumulative Progress | New Samples (6 cols each) */
+.row-charts-two-columns {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  margin-bottom: var(--spacing-xl);
+  align-items: stretch;
+}
+
+.row-charts-two-columns > *:nth-child(1) {
+  grid-column: span 6;
+}
+
+.row-charts-two-columns > *:nth-child(2) {
+  grid-column: span 6;
+}
+
 /* Row 2: Termination Breakdown (6 cols) | Quality Issues (6 cols) */
 .row-2-two-columns {
   display: grid;
@@ -141,6 +158,18 @@
   .row-2-two-columns > *:nth-child(2) {
     grid-column: span 6;
   }
+
+  .row-charts-two-columns {
+    gap: 16px;
+  }
+
+  .row-charts-two-columns > *:nth-child(1) {
+    grid-column: span 6;
+  }
+
+  .row-charts-two-columns > *:nth-child(2) {
+    grid-column: span 6;
+  }
 }
 
 /* Compact (Mobile): < 600px - 4 columns equivalent */
@@ -183,6 +212,16 @@
 
   .row-2-two-columns > *:nth-child(1),
   .row-2-two-columns > *:nth-child(2) {
+    grid-column: span 1;
+  }
+
+  .row-charts-two-columns {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .row-charts-two-columns > *:nth-child(1),
+  .row-charts-two-columns > *:nth-child(2) {
     grid-column: span 1;
   }
 

@@ -1,0 +1,119 @@
+/* New Samples Bar Chart */
+.new-samples-chart-card {
+  background-color: var(--md-sys-color-surface-container-low);
+  padding: 24px;
+  border-radius: var(--md-sys-shape-corner-medium);
+  transition: background-color var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-standard);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 220px;
+}
+
+.new-samples-chart-card:hover {
+  background-color: var(--md-sys-color-surface-container);
+}
+
+.new-samples-chart-card .chart-header {
+  margin-bottom: 16px;
+}
+
+.new-samples-chart-card .chart-title {
+  color: var(--md-sys-color-on-surface);
+  font-size: var(--md-sys-typescale-title-medium);
+  font-weight: 500;
+  margin: 0;
+}
+
+.new-samples-chart-card .chart-subtitle {
+  color: var(--md-sys-color-on-surface-variant);
+  font-weight: 400;
+}
+
+.new-samples-chart-card .chart-area {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+  min-height: 150px;
+}
+
+.new-samples-chart-card .y-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 11px;
+  min-width: 30px;
+}
+
+.new-samples-chart-card .chart-content {
+  flex: 1;
+  position: relative;
+}
+
+.new-samples-chart-card .grid-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.new-samples-chart-card .grid-line {
+  width: 100%;
+  height: 1px;
+  background: repeating-linear-gradient(
+    to right,
+    var(--md-sys-color-outline-variant) 0,
+    var(--md-sys-color-outline-variant) 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  opacity: 0.5;
+}
+
+.new-samples-chart-card .bars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.new-samples-chart-card .bar-wrapper {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.new-samples-chart-card .bar {
+  width: 5px;
+  background-color: #2964FF;
+  border-radius: 2px 2px 0 0;
+  min-height: 2px;
+  transition: opacity var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.new-samples-chart-card .bar:hover {
+  opacity: 0.8;
+}
+
+.new-samples-chart-card .x-axis {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 38px;
+  margin-top: 8px;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 11px;
+}
