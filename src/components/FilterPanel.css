@@ -1,18 +1,21 @@
 /* MD3 Filter Panel */
 .filter-panel {
   background-color: var(--md-sys-color-surface);
-  padding: 16px 24px;
+  padding: 16px 0;
   margin-bottom: 0;
   border-radius: 0;
   border: none;
   position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
 }
 
 .filter-row {
   display: flex;
   gap: 16px;
-  align-items: end;
-  margin-bottom: 16px;
+  align-items: center;
   flex-wrap: nowrap;
 }
 
@@ -41,14 +44,54 @@
   letter-spacing: 0.5px;
 }
 
-/* MD3 Outlined Text Field style for selects */
+/* Filter wrapper with icon */
+.filter-select-wrapper,
+.filter-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--md-sys-color-surface-container-highest);
+  border-radius: var(--md-sys-shape-corner-small);
+  height: 40px;
+  transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.filter-select-wrapper:hover,
+.filter-input-wrapper:hover {
+  background-color: var(--md-sys-color-surface-container-high);
+}
+
+.filter-select-wrapper:focus-within,
+.filter-input-wrapper:focus-within {
+  background-color: var(--md-sys-color-surface-container-high);
+}
+
+.filter-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.dropdown-icon {
+  position: absolute;
+  right: 8px;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 20px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* MD3 Filled style for selects - no outline */
 .filter-select,
 .filter-input {
-  background-color: var(--md-sys-color-surface);
-  border: 1px solid var(--md-sys-color-outline);
+  background-color: transparent;
+  border: none;
   color: var(--md-sys-color-on-surface);
-  padding: 10px 12px;
-  border-radius: var(--md-sys-shape-corner-extra-small);
+  padding: 10px 16px;
+  border-radius: var(--md-sys-shape-corner-small);
   font-size: var(--md-sys-typescale-body-medium);
   outline: none;
   cursor: pointer;
@@ -56,18 +99,29 @@
   font-weight: 400;
   width: 140px;
   height: 40px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.filter-select.with-icon,
+.filter-input.with-icon {
+  padding-left: 40px;
+  padding-right: 32px;
+}
+
+.filter-input.with-icon {
+  padding-right: 16px;
 }
 
 .filter-select:hover,
 .filter-input:hover {
-  border-color: var(--md-sys-color-on-surface);
+  background-color: transparent;
 }
 
 .filter-select:focus,
 .filter-input:focus {
-  border-color: var(--md-sys-color-primary);
-  border-width: 2px;
-  padding: 9px 11px;
+  background-color: transparent;
 }
 
 .multi-select {
@@ -131,11 +185,11 @@
 
 /* MD3 Filled Button */
 .btn-generate {
-  background: var(--md-sys-color-primary);
+  background: #2964FF;
   border: none;
-  color: var(--md-sys-color-on-primary);
+  color: #FFFFFF;
   padding: 0 24px;
-  border-radius: var(--md-sys-shape-corner-full);
+  border-radius: 12px;
   font-size: var(--md-sys-typescale-label-large);
   font-weight: 500;
   letter-spacing: 0.1px;
@@ -146,6 +200,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
+}
+
+.btn-generate .material-symbols-outlined {
+  font-size: 18px;
 }
 
 .btn-generate:hover {
