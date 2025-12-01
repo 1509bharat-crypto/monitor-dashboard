@@ -1,0 +1,198 @@
+.app {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-bg-primary);
+  padding-top: 60px;
+}
+
+.main-content {
+  margin-left: 240px;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  flex: 1;
+  background-color: var(--color-bg-primary);
+  max-width: calc(100vw - 240px);
+}
+
+/* Dashboard sections */
+.dashboard-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.dashboard-section:last-child {
+  margin-bottom: 0;
+}
+
+/* ===========================================
+   Material Design 3 - 12 Column Grid System
+   =========================================== */
+
+/* MD3 Grid Container */
+.md3-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px; /* MD3 standard gutter */
+  margin-bottom: var(--spacing-xl);
+  align-items: stretch;
+}
+
+/* Column span utilities */
+.col-1 { grid-column: span 1; }
+.col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-5 { grid-column: span 5; }
+.col-6 { grid-column: span 6; }
+.col-7 { grid-column: span 7; }
+.col-8 { grid-column: span 8; }
+.col-9 { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; }
+
+/* Row 1: Sample Progress (5 cols) | Data Quality (5 cols) | Metrics (2 cols) */
+.row-1-three-columns {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  margin-bottom: var(--spacing-xl);
+  align-items: stretch;
+}
+
+.row-1-three-columns > *:nth-child(1) {
+  grid-column: span 5;
+}
+
+.row-1-three-columns > *:nth-child(2) {
+  grid-column: span 5;
+}
+
+.row-1-three-columns > *:nth-child(3) {
+  grid-column: span 2;
+}
+
+/* Row 2: Termination Breakdown (6 cols) | Quality Issues (6 cols) */
+.row-2-two-columns {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  margin-bottom: var(--spacing-xl);
+  align-items: stretch;
+}
+
+.row-2-two-columns > *:nth-child(1) {
+  grid-column: span 6;
+}
+
+.row-2-two-columns > *:nth-child(2) {
+  grid-column: span 6;
+}
+
+/* ===========================================
+   Responsive Breakpoints (MD3 Adaptive Layout)
+   =========================================== */
+
+/* Expanded (Desktop): > 1200px - 12 columns */
+@media (min-width: 1201px) {
+  .main-content {
+    max-width: var(--container-max-width);
+    margin-left: 240px;
+    margin-right: auto;
+  }
+
+  .md3-grid {
+    gap: 24px;
+  }
+}
+
+/* Medium (Tablet): 600px - 1200px - 8 columns equivalent */
+@media (max-width: 1200px) {
+  .main-content {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+
+  .md3-grid {
+    gap: 16px;
+  }
+
+  .row-1-three-columns {
+    gap: 16px;
+  }
+
+  .row-1-three-columns > *:nth-child(1) {
+    grid-column: span 6;
+  }
+
+  .row-1-three-columns > *:nth-child(2) {
+    grid-column: span 6;
+  }
+
+  .row-1-three-columns > *:nth-child(3) {
+    grid-column: span 12;
+  }
+
+  .row-2-two-columns {
+    gap: 16px;
+  }
+
+  .row-2-two-columns > *:nth-child(1) {
+    grid-column: span 6;
+  }
+
+  .row-2-two-columns > *:nth-child(2) {
+    grid-column: span 6;
+  }
+}
+
+/* Compact (Mobile): < 600px - 4 columns equivalent */
+@media (max-width: 1024px) {
+  .main-content {
+    margin-left: 0;
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  .dashboard-section {
+    margin-bottom: var(--spacing-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: var(--spacing-sm);
+  }
+
+  .md3-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .row-1-three-columns {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .row-1-three-columns > *:nth-child(1),
+  .row-1-three-columns > *:nth-child(2),
+  .row-1-three-columns > *:nth-child(3) {
+    grid-column: span 1;
+  }
+
+  .row-2-two-columns {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .row-2-two-columns > *:nth-child(1),
+  .row-2-two-columns > *:nth-child(2) {
+    grid-column: span 1;
+  }
+
+  .dashboard-section {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  /* MD3 Mobile column utilities */
+  .col-sm-1 { grid-column: span 1; }
+  .col-sm-2 { grid-column: span 2; }
+  .col-sm-3 { grid-column: span 3; }
+  .col-sm-4 { grid-column: span 4; }
+}

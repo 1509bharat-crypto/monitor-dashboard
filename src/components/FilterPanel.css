@@ -1,0 +1,157 @@
+/* MD3 Filter Panel */
+.filter-panel {
+  background-color: var(--md-sys-color-surface);
+  padding: 16px 24px;
+  margin-bottom: 0;
+  border-radius: 0;
+  border: none;
+  position: relative;
+}
+
+.filter-row {
+  display: flex;
+  gap: 16px;
+  align-items: end;
+  margin-bottom: 16px;
+  flex-wrap: nowrap;
+}
+
+.filter-row:last-child {
+  margin-bottom: 0;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.filter-group.wide {
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+/* MD3 Label Small */
+.filter-label {
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: var(--md-sys-typescale-label-small);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* MD3 Outlined Text Field style for selects */
+.filter-select,
+.filter-input {
+  background-color: var(--md-sys-color-surface);
+  border: 1px solid var(--md-sys-color-outline);
+  color: var(--md-sys-color-on-surface);
+  padding: 10px 12px;
+  border-radius: var(--md-sys-shape-corner-extra-small);
+  font-size: var(--md-sys-typescale-body-medium);
+  outline: none;
+  cursor: pointer;
+  transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+  font-weight: 400;
+  width: 140px;
+  height: 40px;
+}
+
+.filter-select:hover,
+.filter-input:hover {
+  border-color: var(--md-sys-color-on-surface);
+}
+
+.filter-select:focus,
+.filter-input:focus {
+  border-color: var(--md-sys-color-primary);
+  border-width: 2px;
+  padding: 9px 11px;
+}
+
+.multi-select {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  min-height: 40px;
+  padding: 6px 12px;
+}
+
+/* MD3 Chip / Filter Chip */
+.tag {
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface-variant);
+  padding: 6px 12px;
+  border-radius: var(--md-sys-shape-corner-small);
+  font-size: var(--md-sys-typescale-label-large);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 32px;
+}
+
+.tag-remove {
+  background: none;
+  border: none;
+  color: var(--md-sys-color-on-surface-variant);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--md-sys-shape-corner-full);
+  transition: background-color var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.tag-remove:hover {
+  color: var(--md-sys-color-on-surface);
+  background-color: rgba(230, 224, 233, 0.08);
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: var(--md-sys-color-outline);
+  cursor: pointer;
+  font-size: var(--md-sys-typescale-body-small);
+  padding: 0;
+  margin-left: auto;
+}
+
+.date-input {
+  cursor: text;
+}
+
+/* MD3 Filled Button */
+.btn-generate {
+  background: var(--md-sys-color-primary);
+  border: none;
+  color: var(--md-sys-color-on-primary);
+  padding: 0 24px;
+  border-radius: var(--md-sys-shape-corner-full);
+  font-size: var(--md-sys-typescale-label-large);
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  cursor: pointer;
+  transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+  white-space: nowrap;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-generate:hover {
+  box-shadow: var(--md-sys-elevation-level1);
+}
+
+.btn-generate:active {
+  box-shadow: none;
+}

@@ -1,0 +1,389 @@
+:root {
+  /* ===========================================
+     Material Design 3 - Design Tokens (Dark Theme)
+     =========================================== */
+
+  /* MD3 Color System - Dark Theme */
+  /* Primary - Neutral/White */
+  --md-sys-color-primary: #FFFFFF;
+  --md-sys-color-on-primary: #1C1B1F;
+  --md-sys-color-primary-container: #E6E1E5;
+  --md-sys-color-on-primary-container: #1C1B1F;
+
+  /* Secondary */
+  --md-sys-color-secondary: #CCC2DC;
+  --md-sys-color-on-secondary: #332D41;
+  --md-sys-color-secondary-container: #4A4458;
+  --md-sys-color-on-secondary-container: #E8DEF8;
+
+  /* Tertiary */
+  --md-sys-color-tertiary: #EFB8C8;
+  --md-sys-color-on-tertiary: #492532;
+  --md-sys-color-tertiary-container: #633B48;
+  --md-sys-color-on-tertiary-container: #FFD8E4;
+
+  /* Error */
+  --md-sys-color-error: #F2B8B5;
+  --md-sys-color-on-error: #601410;
+  --md-sys-color-error-container: #8C1D18;
+  --md-sys-color-on-error-container: #F9DEDC;
+
+  /* Surface (Dark) */
+  --md-sys-color-surface: #141218;
+  --md-sys-color-surface-dim: #141218;
+  --md-sys-color-surface-bright: #3B383E;
+  --md-sys-color-surface-container-lowest: #0F0D13;
+  --md-sys-color-surface-container-low: #1D1B20;
+  --md-sys-color-surface-container: #211F26;
+  --md-sys-color-surface-container-high: #2B2930;
+  --md-sys-color-surface-container-highest: #36343B;
+
+  /* On Surface */
+  --md-sys-color-on-surface: #E6E0E9;
+  --md-sys-color-on-surface-variant: #CAC4D0;
+
+  /* Outline */
+  --md-sys-color-outline: #938F99;
+  --md-sys-color-outline-variant: #49454F;
+
+  /* Inverse */
+  --md-sys-color-inverse-surface: #E6E0E9;
+  --md-sys-color-inverse-on-surface: #322F35;
+  --md-sys-color-inverse-primary: #605D62;
+
+  /* MD3 Typography - Type Scale */
+  --md-sys-typescale-display-large: 57px;
+  --md-sys-typescale-display-medium: 45px;
+  --md-sys-typescale-display-small: 36px;
+  --md-sys-typescale-headline-large: 32px;
+  --md-sys-typescale-headline-medium: 28px;
+  --md-sys-typescale-headline-small: 24px;
+  --md-sys-typescale-title-large: 22px;
+  --md-sys-typescale-title-medium: 16px;
+  --md-sys-typescale-title-small: 14px;
+  --md-sys-typescale-body-large: 16px;
+  --md-sys-typescale-body-medium: 14px;
+  --md-sys-typescale-body-small: 12px;
+  --md-sys-typescale-label-large: 14px;
+  --md-sys-typescale-label-medium: 12px;
+  --md-sys-typescale-label-small: 11px;
+
+  /* MD3 Shape - Corner Radius */
+  --md-sys-shape-corner-none: 0px;
+  --md-sys-shape-corner-extra-small: 4px;
+  --md-sys-shape-corner-small: 8px;
+  --md-sys-shape-corner-medium: 12px;
+  --md-sys-shape-corner-large: 16px;
+  --md-sys-shape-corner-extra-large: 28px;
+  --md-sys-shape-corner-full: 9999px;
+
+  /* MD3 Elevation (using tonal color overlay for dark theme) */
+  --md-sys-elevation-level0: none;
+  --md-sys-elevation-level1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3);
+  --md-sys-elevation-level2: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px rgba(0, 0, 0, 0.3);
+  --md-sys-elevation-level3: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px rgba(0, 0, 0, 0.3);
+  --md-sys-elevation-level4: 0px 6px 10px 4px rgba(0, 0, 0, 0.15), 0px 2px 3px rgba(0, 0, 0, 0.3);
+  --md-sys-elevation-level5: 0px 8px 12px 6px rgba(0, 0, 0, 0.15), 0px 4px 4px rgba(0, 0, 0, 0.3);
+
+  /* MD3 Motion - Easing */
+  --md-sys-motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --md-sys-motion-easing-standard-decelerate: cubic-bezier(0, 0, 0, 1);
+  --md-sys-motion-easing-standard-accelerate: cubic-bezier(0.3, 0, 1, 1);
+  --md-sys-motion-easing-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --md-sys-motion-easing-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --md-sys-motion-easing-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
+
+  /* MD3 Motion - Duration */
+  --md-sys-motion-duration-short1: 50ms;
+  --md-sys-motion-duration-short2: 100ms;
+  --md-sys-motion-duration-short3: 150ms;
+  --md-sys-motion-duration-short4: 200ms;
+  --md-sys-motion-duration-medium1: 250ms;
+  --md-sys-motion-duration-medium2: 300ms;
+  --md-sys-motion-duration-medium3: 350ms;
+  --md-sys-motion-duration-medium4: 400ms;
+  --md-sys-motion-duration-long1: 450ms;
+  --md-sys-motion-duration-long2: 500ms;
+
+  /* MD3 State Layer Opacity */
+  --md-sys-state-hover-opacity: 0.08;
+  --md-sys-state-focus-opacity: 0.12;
+  --md-sys-state-pressed-opacity: 0.12;
+  --md-sys-state-dragged-opacity: 0.16;
+
+  /* ===========================================
+     Legacy Variables (mapped to MD3)
+     =========================================== */
+
+  /* Spacing Variables */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 40px;
+  --spacing-2xl: 48px;
+
+  /* Layout Variables */
+  --container-max-width: 1400px;
+  --grid-gap: var(--spacing-md);
+
+  /* Typography (Legacy - mapped to MD3) */
+  --font-size-xs: var(--md-sys-typescale-label-small);
+  --font-size-sm: var(--md-sys-typescale-label-medium);
+  --font-size-base: var(--md-sys-typescale-body-medium);
+  --font-size-md: var(--md-sys-typescale-body-large);
+  --font-size-lg: var(--md-sys-typescale-title-large);
+  --font-size-xl: var(--md-sys-typescale-headline-small);
+
+  /* Colors (Legacy - mapped to MD3) */
+  --color-bg-primary: var(--md-sys-color-surface);
+  --color-bg-secondary: var(--md-sys-color-surface-container);
+  --color-border: var(--md-sys-color-outline-variant);
+  --color-text-primary: var(--md-sys-color-on-surface);
+  --color-text-secondary: var(--md-sys-color-on-surface-variant);
+  --color-text-tertiary: var(--md-sys-color-outline);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  font-size: var(--md-sys-typescale-body-medium);
+  line-height: 1.5;
+  letter-spacing: 0.25px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ===========================================
+   MD3 Component Base Styles
+   =========================================== */
+
+/* MD3 Card - Filled */
+.md3-card {
+  background-color: var(--md-sys-color-surface-container-high);
+  border-radius: var(--md-sys-shape-corner-medium);
+  padding: 16px;
+  transition: box-shadow var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-standard);
+}
+
+.md3-card:hover {
+  box-shadow: var(--md-sys-elevation-level1);
+}
+
+/* MD3 Card - Outlined */
+.md3-card-outlined {
+  background-color: var(--md-sys-color-surface);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-sys-shape-corner-medium);
+  padding: 16px;
+  transition: all var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-standard);
+}
+
+.md3-card-outlined:hover {
+  border-color: var(--md-sys-color-outline);
+}
+
+/* MD3 Card - Elevated */
+.md3-card-elevated {
+  background-color: var(--md-sys-color-surface-container-low);
+  border-radius: var(--md-sys-shape-corner-medium);
+  padding: 16px;
+  box-shadow: var(--md-sys-elevation-level1);
+  transition: box-shadow var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-standard);
+}
+
+.md3-card-elevated:hover {
+  box-shadow: var(--md-sys-elevation-level2);
+}
+
+/* MD3 Button - Filled */
+.md3-button-filled {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 24px;
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  border: none;
+  border-radius: var(--md-sys-shape-corner-full);
+  font-size: var(--md-sys-typescale-label-large);
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  cursor: pointer;
+  transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.md3-button-filled:hover {
+  box-shadow: var(--md-sys-elevation-level1);
+}
+
+.md3-button-filled:active {
+  box-shadow: none;
+}
+
+/* MD3 Button - Outlined */
+.md3-button-outlined {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 24px;
+  background-color: transparent;
+  color: var(--md-sys-color-primary);
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: var(--md-sys-shape-corner-full);
+  font-size: var(--md-sys-typescale-label-large);
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  cursor: pointer;
+  transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.md3-button-outlined:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* MD3 Button - Text */
+.md3-button-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 12px;
+  background-color: transparent;
+  color: var(--md-sys-color-primary);
+  border: none;
+  border-radius: var(--md-sys-shape-corner-full);
+  font-size: var(--md-sys-typescale-label-large);
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  cursor: pointer;
+  transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+}
+
+.md3-button-text:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* MD3 Typography Classes */
+.md3-display-large {
+  font-size: var(--md-sys-typescale-display-large);
+  font-weight: 400;
+  line-height: 64px;
+  letter-spacing: -0.25px;
+}
+
+.md3-display-medium {
+  font-size: var(--md-sys-typescale-display-medium);
+  font-weight: 400;
+  line-height: 52px;
+  letter-spacing: 0;
+}
+
+.md3-display-small {
+  font-size: var(--md-sys-typescale-display-small);
+  font-weight: 400;
+  line-height: 44px;
+  letter-spacing: 0;
+}
+
+.md3-headline-large {
+  font-size: var(--md-sys-typescale-headline-large);
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0;
+}
+
+.md3-headline-medium {
+  font-size: var(--md-sys-typescale-headline-medium);
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0;
+}
+
+.md3-headline-small {
+  font-size: var(--md-sys-typescale-headline-small);
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0;
+}
+
+.md3-title-large {
+  font-size: var(--md-sys-typescale-title-large);
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+.md3-title-medium {
+  font-size: var(--md-sys-typescale-title-medium);
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+}
+
+.md3-title-small {
+  font-size: var(--md-sys-typescale-title-small);
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+
+.md3-body-large {
+  font-size: var(--md-sys-typescale-body-large);
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+.md3-body-medium {
+  font-size: var(--md-sys-typescale-body-medium);
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+
+.md3-body-small {
+  font-size: var(--md-sys-typescale-body-small);
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+}
+
+.md3-label-large {
+  font-size: var(--md-sys-typescale-label-large);
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+}
+
+.md3-label-medium {
+  font-size: var(--md-sys-typescale-label-medium);
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+}
+
+.md3-label-small {
+  font-size: var(--md-sys-typescale-label-small);
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+}

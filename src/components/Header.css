@@ -1,0 +1,80 @@
+/* MD3 Top App Bar - Small */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: var(--md-sys-color-surface-container);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  height: 56px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  font-size: 20px;
+  color: var(--md-sys-color-primary);
+}
+
+/* MD3 Title Large */
+.logo-text {
+  color: var(--md-sys-color-on-surface);
+  font-size: var(--md-sys-typescale-title-large);
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+.header-nav {
+  display: flex;
+  gap: 8px;
+}
+
+/* MD3 Navigation Button / Text Button */
+.nav-link {
+  background: none;
+  border: none;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: var(--md-sys-typescale-label-large);
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: var(--md-sys-shape-corner-full);
+  transition: all var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-standard);
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-link:hover {
+  background-color: rgba(230, 224, 233, 0.08);
+  color: var(--md-sys-color-on-surface);
+}
+
+.nav-link.active {
+  color: var(--md-sys-color-primary);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* MD3 Gradient accent bar */
+.gradient-bar {
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    var(--md-sys-color-tertiary) 0%,
+    var(--md-sys-color-primary) 50%,
+    var(--md-sys-color-secondary) 100%
+  );
+}

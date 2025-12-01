@@ -1,0 +1,134 @@
+/* MD3 Horizontal Bar Chart */
+.horizontal-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.chart-header + .horizontal-bars {
+  margin-top: 0;
+}
+
+.horizontal-bar-item-overlay {
+  width: 100%;
+}
+
+.bar-container-overlay {
+  position: relative;
+  height: 40px;
+  background-color: transparent;
+  border-radius: var(--md-sys-shape-corner-full);
+  overflow: visible;
+}
+
+.bar-fill-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--md-sys-color-surface-container-highest);
+  border-radius: var(--md-sys-shape-corner-full);
+  transition: width var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-standard);
+}
+
+.bar-overlay-content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 16px;
+  z-index: 1;
+}
+
+/* MD3 Body Medium */
+.bar-label-overlay {
+  color: var(--md-sys-color-on-surface);
+  font-size: var(--md-sys-typescale-body-medium);
+  font-weight: 500;
+  letter-spacing: 0.25px;
+}
+
+/* MD3 Body Large */
+.bar-value-overlay {
+  position: relative;
+  color: var(--md-sys-color-on-surface);
+  font-size: var(--md-sys-typescale-body-large);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bar-count {
+  display: inline;
+}
+
+.bar-percentage-hover {
+  display: none;
+  color: var(--md-sys-color-on-surface-variant);
+  font-weight: 500;
+}
+
+.bar-container-hoverable:hover .bar-count {
+  display: none;
+}
+
+.bar-container-hoverable:hover .bar-percentage-hover {
+  display: inline;
+}
+
+.bar-container-no-fill {
+  background-color: transparent;
+  border: none;
+  cursor: default;
+}
+
+.bar-container-no-fill .bar-overlay-content {
+  padding: 0 20px;
+}
+
+.bar-container-no-fill .bar-value-overlay {
+  justify-content: flex-end;
+}
+
+.bar-container-no-fill .bar-count {
+  display: inline;
+}
+
+.bar-container-no-fill.bar-container-hoverable:hover .bar-count {
+  display: none;
+}
+
+.bar-container-no-fill.bar-container-hoverable:hover .bar-percentage-hover {
+  display: inline;
+}
+
+.bar-percentage-static {
+  display: inline;
+  color: var(--md-sys-color-on-surface-variant);
+  font-weight: 500;
+}
+
+/* MD3 Title Small for stat items */
+.horizontal-bar-item-stat .bar-label-overlay {
+  font-size: var(--md-sys-typescale-title-small);
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface);
+}
+
+.horizontal-bar-item-stat .bar-value-overlay {
+  font-weight: 500;
+}
+
+.horizontal-bar-item-stat + .horizontal-bar-item-overlay:not(.horizontal-bar-item-stat) {
+  margin-top: 4px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .horizontal-bars {
+    gap: 12px;
+  }
+}

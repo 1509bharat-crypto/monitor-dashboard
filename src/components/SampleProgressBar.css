@@ -1,0 +1,114 @@
+/* MD3 Sample Progress Section - Outlined Card */
+.sample-progress-section {
+  background-color: var(--md-sys-color-surface);
+  padding: 24px;
+  border-radius: var(--md-sys-shape-corner-medium);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: border-color var(--md-sys-motion-duration-medium2) var(--md-sys-motion-easing-standard);
+}
+
+.sample-progress-section:hover {
+  border-color: var(--md-sys-color-outline);
+}
+
+.section-header {
+  margin-bottom: 0;
+}
+
+/* MD3 Title Large */
+.section-title {
+  color: var(--md-sys-color-on-surface);
+  font-size: var(--md-sys-typescale-title-large);
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+  margin: 0 0 6px 0;
+}
+
+.section-stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.stat-item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* MD3 Label Medium */
+.stat-label {
+  color: var(--md-sys-color-outline);
+  font-size: var(--md-sys-typescale-label-medium);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* MD3 Body Large */
+.stat-value {
+  color: var(--md-sys-color-on-surface);
+  font-size: var(--md-sys-typescale-body-large);
+  font-weight: 500;
+}
+
+/* MD3 Supporting text container */
+.progress-summary {
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: var(--md-sys-typescale-body-medium);
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: var(--md-sys-color-surface-container);
+  border-radius: var(--md-sys-shape-corner-small);
+  border-left: 3px solid var(--md-sys-color-primary);
+}
+
+/* Breakdown alignment */
+.sample-progress-breakdown .horizontal-bars {
+  margin-top: 16px;
+}
+
+.sample-progress-breakdown .bar-label-overlay {
+  font-weight: 500;
+}
+
+.sample-progress-breakdown .bar-value-overlay {
+  font-size: var(--md-sys-typescale-body-medium);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1200px) {
+  .sample-progress-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sample-progress-section {
+    padding: 16px;
+  }
+
+  .section-title {
+    font-size: var(--md-sys-typescale-title-medium);
+  }
+
+  .progress-summary {
+    font-size: var(--md-sys-typescale-body-small);
+    padding: 12px;
+  }
+
+  .section-stats {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .sample-progress-breakdown .horizontal-bars {
+    gap: 12px;
+  }
+}

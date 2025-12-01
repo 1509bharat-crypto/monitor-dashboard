@@ -1,0 +1,26 @@
+.metrics-section {
+  margin-bottom: 24px;
+}
+
+.metrics-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.metrics-table .table-row {
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.metrics-table .table-row:last-child {
+  border-bottom: none;
+}
+
+.metrics-table .table-cell {
+  color: #e0e0e0;
+  font-size: 14px;
+  padding: 14px 20px;
+}
+
+.metrics-table .table-cell.right-align {
+  text-align: right;
+}
