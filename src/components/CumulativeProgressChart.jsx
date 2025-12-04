@@ -1,6 +1,9 @@
+import { useData } from '../contexts/DataContext'
 import './CumulativeProgressChart.css'
 
 const CumulativeProgressChart = () => {
+  const { countryTargets } = useData()
+
   // Realistic cumulative data - starts slow, builds momentum, typical S-curve pattern
   const data = [
     { date: 'Oct 15', value: 12 },
@@ -19,12 +22,27 @@ const CumulativeProgressChart = () => {
     { date: 'Nov 23', value: 434 }
   ]
 
-  const maxValue = 1000
+  // Calculate total target from all countries
+  const totalTarget = Object.values(countryTargets).reduce((sum, val) => sum + val, 0)
+
+  // Calculate max value from data
+  const dataMax = Math.max(...data.map(d => d.value))
+
+  // Set maxValue to be the higher of data max or target, with 15% padding
+  const maxValue = Math.ceil(Math.max(dataMax, totalTarget) * 1.15)
+
   const startDate = data[0].date
   const endDate = data[data.length - 1].date
 
   // Calculate percentage heights for each point
   const getHeight = (value) => (value / maxValue) * 100
+
+  // Calculate Y-axis labels
+  const topLabel = maxValue
+  const midLabel = Math.floor(maxValue / 2)
+
+  // Calculate target line position
+  const targetYPosition = 100 - getHeight(totalTarget)
 
   // Generate SVG path for smooth curve
   const generatePath = () => {
@@ -55,8 +73,8 @@ const CumulativeProgressChart = () => {
       </div>
       <div className="chart-area">
         <div className="y-axis">
-          <span>1000</span>
-          <span>500</span>
+          <span>{topLabel.toLocaleString()}</span>
+          <span>{midLabel.toLocaleString()}</span>
           <span>0</span>
         </div>
         <div className="chart-content">
@@ -70,6 +88,19 @@ const CumulativeProgressChart = () => {
             viewBox="0 0 100 100"
             preserveAspectRatio="none"
           >
+            {/* Target reference line */}
+            <line
+              x1="0"
+              y1={targetYPosition}
+              x2="100"
+              y2={targetYPosition}
+              stroke="#8FA8FF"
+              strokeWidth="1.5"
+              strokeDasharray="4 4"
+              vectorEffect="non-scaling-stroke"
+              opacity="0.5"
+            />
+            {/* Progress line */}
             <path
               d={generatePath()}
               fill="none"
@@ -78,6 +109,13 @@ const CumulativeProgressChart = () => {
               vectorEffect="non-scaling-stroke"
             />
           </svg>
+          {/* Target label positioned absolutely */}
+          <div
+            className="target-label"
+            style={{ top: `${targetYPosition}%` }}
+          >
+            Target: {totalTarget.toLocaleString()}
+          </div>
         </div>
       </div>
       <div className="x-axis">

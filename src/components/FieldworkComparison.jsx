@@ -14,7 +14,21 @@ const FieldworkComparison = ({ config, onExit, onEdit }) => {
       newSamples: [45, 52, 38, 61, 44, 55, 48, 62, 39, 51, 47, 58],
       sampleProgress: { started: 2341, completed: 847, terminated: 892, qualified: 602 },
       irLoi: { ir: 9.81, loiAvg: 29.3, loiMedian: 21.13 },
-      dataQuality: { good: 78, issues: 22 }
+      dataQuality: { good: 78, issues: 22 },
+      qualityIssues: [
+        { label: 'AI generated', value: 42, percentage: 35 },
+        { label: 'Straightlining', value: 34, percentage: 28 },
+        { label: 'Speeder', value: 25, percentage: 21 },
+        { label: 'Low relevance', value: 12, percentage: 10 },
+        { label: 'Duplicate answers', value: 7, percentage: 6 }
+      ],
+      terminates: [
+        { label: 'Overquotas', value: 268, percentage: 30 },
+        { label: 'Age Screenout', value: 214, percentage: 24 },
+        { label: 'IKEA Screenout', value: 196, percentage: 22 },
+        { label: 'Product Screenout', value: 125, percentage: 14 },
+        { label: 'Category Assignment', value: 89, percentage: 10 }
+      ]
     },
     UK: {
       code: 'UK',
@@ -24,7 +38,21 @@ const FieldworkComparison = ({ config, onExit, onEdit }) => {
       newSamples: [32, 41, 29, 48, 38, 42, 51, 37, 44, 39, 45, 38],
       sampleProgress: { started: 1892, completed: 623, terminated: 734, qualified: 535 },
       irLoi: { ir: 11.2, loiAvg: 26.8, loiMedian: 19.5 },
-      dataQuality: { good: 82, issues: 18 }
+      dataQuality: { good: 82, issues: 18 },
+      qualityIssues: [
+        { label: 'AI generated', value: 28, percentage: 32 },
+        { label: 'Straightlining', value: 25, percentage: 29 },
+        { label: 'Speeder', value: 19, percentage: 22 },
+        { label: 'Low relevance', value: 10, percentage: 11 },
+        { label: 'Duplicate answers', value: 5, percentage: 6 }
+      ],
+      terminates: [
+        { label: 'Overquotas', value: 220, percentage: 30 },
+        { label: 'Age Screenout', value: 191, percentage: 26 },
+        { label: 'IKEA Screenout', value: 147, percentage: 20 },
+        { label: 'Product Screenout', value: 103, percentage: 14 },
+        { label: 'Category Assignment', value: 73, percentage: 10 }
+      ]
     },
     DE: {
       code: 'DE',
@@ -34,7 +62,21 @@ const FieldworkComparison = ({ config, onExit, onEdit }) => {
       newSamples: [24, 31, 26, 39, 33, 37, 42, 29, 38, 34, 40, 32],
       sampleProgress: { started: 1456, completed: 512, terminated: 567, qualified: 377 },
       irLoi: { ir: 8.9, loiAvg: 31.2, loiMedian: 23.4 },
-      dataQuality: { good: 75, issues: 25 }
+      dataQuality: { good: 75, issues: 25 },
+      qualityIssues: [
+        { label: 'AI generated', value: 36, percentage: 36 },
+        { label: 'Straightlining', value: 29, percentage: 29 },
+        { label: 'Speeder', value: 20, percentage: 20 },
+        { label: 'Low relevance', value: 10, percentage: 10 },
+        { label: 'Duplicate answers', value: 5, percentage: 5 }
+      ],
+      terminates: [
+        { label: 'Overquotas', value: 170, percentage: 30 },
+        { label: 'Age Screenout', value: 147, percentage: 26 },
+        { label: 'IKEA Screenout', value: 119, percentage: 21 },
+        { label: 'Product Screenout', value: 79, percentage: 14 },
+        { label: 'Category Assignment', value: 52, percentage: 9 }
+      ]
     },
     US: {
       code: 'US',
@@ -44,7 +86,21 @@ const FieldworkComparison = ({ config, onExit, onEdit }) => {
       newSamples: [65, 78, 52, 89, 67, 74, 82, 56, 71, 63, 78, 55],
       sampleProgress: { started: 3456, completed: 1234, terminated: 1456, qualified: 766 },
       irLoi: { ir: 10.5, loiAvg: 28.1, loiMedian: 20.8 },
-      dataQuality: { good: 80, issues: 20 }
+      dataQuality: { good: 80, issues: 20 },
+      qualityIssues: [
+        { label: 'AI generated', value: 58, percentage: 34 },
+        { label: 'Straightlining', value: 48, percentage: 28 },
+        { label: 'Speeder', value: 36, percentage: 21 },
+        { label: 'Low relevance', value: 20, percentage: 12 },
+        { label: 'Duplicate answers', value: 9, percentage: 5 }
+      ],
+      terminates: [
+        { label: 'Overquotas', value: 437, percentage: 30 },
+        { label: 'Age Screenout', value: 349, percentage: 24 },
+        { label: 'IKEA Screenout', value: 320, percentage: 22 },
+        { label: 'Product Screenout', value: 204, percentage: 14 },
+        { label: 'Category Assignment', value: 146, percentage: 10 }
+      ]
     },
     CA: {
       code: 'CA',
@@ -54,7 +110,21 @@ const FieldworkComparison = ({ config, onExit, onEdit }) => {
       newSamples: [28, 34, 22, 41, 31, 38, 35, 27, 33, 29, 36, 24],
       sampleProgress: { started: 1123, completed: 389, terminated: 423, qualified: 311 },
       irLoi: { ir: 12.1, loiAvg: 25.4, loiMedian: 18.9 },
-      dataQuality: { good: 84, issues: 16 }
+      dataQuality: { good: 84, issues: 16 },
+      qualityIssues: [
+        { label: 'AI generated', value: 21, percentage: 36 },
+        { label: 'Straightlining', value: 17, percentage: 29 },
+        { label: 'Speeder', value: 12, percentage: 21 },
+        { label: 'Low relevance', value: 5, percentage: 9 },
+        { label: 'Duplicate answers', value: 3, percentage: 5 }
+      ],
+      terminates: [
+        { label: 'Overquotas', value: 127, percentage: 30 },
+        { label: 'Age Screenout', value: 110, percentage: 26 },
+        { label: 'IKEA Screenout', value: 85, percentage: 20 },
+        { label: 'Product Screenout', value: 59, percentage: 14 },
+        { label: 'Category Assignment', value: 42, percentage: 10 }
+      ]
     },
     FR: {
       code: 'FR',
@@ -64,7 +134,21 @@ const FieldworkComparison = ({ config, onExit, onEdit }) => {
       newSamples: [35, 42, 28, 52, 39, 45, 41, 32, 42, 36, 43, 30],
       sampleProgress: { started: 1345, completed: 456, terminated: 512, qualified: 377 },
       irLoi: { ir: 9.3, loiAvg: 30.1, loiMedian: 22.6 },
-      dataQuality: { good: 77, issues: 23 }
+      dataQuality: { good: 77, issues: 23 },
+      qualityIssues: [
+        { label: 'AI generated', value: 34, percentage: 35 },
+        { label: 'Straightlining', value: 27, percentage: 28 },
+        { label: 'Speeder', value: 20, percentage: 21 },
+        { label: 'Low relevance', value: 11, percentage: 11 },
+        { label: 'Duplicate answers', value: 5, percentage: 5 }
+      ],
+      terminates: [
+        { label: 'Overquotas', value: 154, percentage: 30 },
+        { label: 'Age Screenout', value: 133, percentage: 26 },
+        { label: 'IKEA Screenout', value: 102, percentage: 20 },
+        { label: 'Product Screenout', value: 72, percentage: 14 },
+        { label: 'Category Assignment', value: 51, percentage: 10 }
+      ]
     }
   }
 
@@ -77,7 +161,7 @@ const FieldworkComparison = ({ config, onExit, onEdit }) => {
   const selectedMetrics = config?.metrics || ['qualifiedCompletes', 'cumulativeProgress', 'sampleProgress']
 
   // Mini line chart for cumulative progress
-  const MiniLineChart = ({ data, color, maxValue }) => {
+  const MiniLineChart = ({ data, color, maxValue, target }) => {
     const width = 300
     const height = 80
     const padding = 8
@@ -98,27 +182,69 @@ const FieldworkComparison = ({ config, onExit, onEdit }) => {
       }).join(' ') +
       ` L ${width - padding},${height - padding} Z`
 
+    // Calculate target line position
+    const targetY = target ? height - padding - (target / max) * (height - padding * 2) : null
+    const targetYPercent = target ? ((targetY / height) * 100) : null
+
     return (
-      <svg viewBox={`0 0 ${width} ${height}`} className="mini-chart" preserveAspectRatio="none">
-        <defs>
-          <linearGradient id={`gradient-${color.replace('#', '')}`} x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor={color} stopOpacity="0.3" />
-            <stop offset="100%" stopColor={color} stopOpacity="0.05" />
-          </linearGradient>
-        </defs>
-        <path
-          d={areaPath}
-          fill={`url(#gradient-${color.replace('#', '')})`}
-        />
-        <polyline
-          fill="none"
-          stroke={color}
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          points={points}
-        />
-      </svg>
+      <div style={{ position: 'relative', width: '100%', height: '64px' }}>
+        <svg viewBox={`0 0 ${width} ${height}`} className="mini-chart" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id={`gradient-${color.replace('#', '')}`} x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor={color} stopOpacity="0.3" />
+              <stop offset="100%" stopColor={color} stopOpacity="0.05" />
+            </linearGradient>
+          </defs>
+          <path
+            d={areaPath}
+            fill={`url(#gradient-${color.replace('#', '')})`}
+          />
+          {/* Target reference line */}
+          {target && targetY && (
+            <line
+              x1={padding}
+              y1={targetY}
+              x2={width - padding}
+              y2={targetY}
+              stroke="#8FA8FF"
+              strokeWidth="1.5"
+              strokeDasharray="3 3"
+              opacity="0.5"
+            />
+          )}
+          <polyline
+            fill="none"
+            stroke={color}
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            points={points}
+          />
+        </svg>
+        {/* Target label */}
+        {target && targetYPercent && (
+          <div
+            style={{
+              position: 'absolute',
+              right: '4px',
+              top: `${targetYPercent}%`,
+              transform: 'translateY(-100%)',
+              fontSize: '10px',
+              fontWeight: 600,
+              color: '#8FA8FF',
+              backgroundColor: 'var(--md-sys-color-surface-container-low)',
+              padding: '2px 6px',
+              borderRadius: '4px',
+              pointerEvents: 'none',
+              whiteSpace: 'nowrap',
+              marginTop: '-2px',
+              opacity: 0.5
+            }}
+          >
+            Target: {target.toLocaleString()}
+          </div>
+        )}
+      </div>
     )
   }
 
@@ -231,6 +357,7 @@ const FieldworkComparison = ({ config, onExit, onEdit }) => {
                   data={market.cumulativeData}
                   color={market.color}
                   maxValue={maxTarget}
+                  target={market.completes.target}
                 />
               </div>
             )}
@@ -300,8 +427,7 @@ const FieldworkComparison = ({ config, onExit, onEdit }) => {
                     className="quality-segment qualified"
                     style={{ width: `${market.dataQuality.good}%`, backgroundColor: market.color }}
                   />
-                  <div
-                    className="quality-segment insufficient"
+                  <div className="quality-segment insufficient"
                     style={{ width: `${market.dataQuality.issues}%` }}
                   />
                 </div>
@@ -316,6 +442,52 @@ const FieldworkComparison = ({ config, onExit, onEdit }) => {
                     <span className="legend-label">Insufficient</span>
                     <span className="legend-value">{market.dataQuality.issues}%</span>
                   </div>
+                </div>
+              </div>
+            )}
+
+            {/* Quality Issues Breakdown */}
+            {selectedMetrics.includes('qualityIssues') && market.qualityIssues && (
+              <div className="comparison-card">
+                <div className="card-title">Quality Issues Breakdown</div>
+                <div className="breakdown-list">
+                  {market.qualityIssues.map((issue, index) => (
+                    <div key={index} className="breakdown-item">
+                      <div className="breakdown-label-row">
+                        <span className="breakdown-label">{issue.label}</span>
+                        <span className="breakdown-percentage">{issue.percentage}%</span>
+                      </div>
+                      <div className="breakdown-bar-container">
+                        <div
+                          className="breakdown-bar-fill"
+                          style={{ width: `${issue.percentage}%`, backgroundColor: market.color }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Terminates Breakdown */}
+            {selectedMetrics.includes('terminates') && market.terminates && (
+              <div className="comparison-card">
+                <div className="card-title">Terminates Breakdown</div>
+                <div className="breakdown-list">
+                  {market.terminates.map((terminate, index) => (
+                    <div key={index} className="breakdown-item">
+                      <div className="breakdown-label-row">
+                        <span className="breakdown-label">{terminate.label}</span>
+                        <span className="breakdown-percentage">{terminate.percentage}%</span>
+                      </div>
+                      <div className="breakdown-bar-container">
+                        <div
+                          className="breakdown-bar-fill"
+                          style={{ width: `${terminate.percentage}%`, backgroundColor: market.color }}
+                        />
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             )}
